@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using JetBrains.Annotations;
 using PlayerControl;
 using Unity.Mathematics;
@@ -35,7 +36,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] 
     private float animationSpeedMultiplier = 1.5f;
 
-    private bool movementBlock = false;
+    public bool movementBlock = false;
     
     private CharacterController cc;
     private Animator playerAnimator;
@@ -87,9 +88,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(0.05f);
+        OnAttack(default(InputAction.CallbackContext));
+    }
+
     private void OnAttackEnd()
     {
         movementBlock = false;
+        // StartCoroutine(Delay());
     }
 
     private void OnEnable()

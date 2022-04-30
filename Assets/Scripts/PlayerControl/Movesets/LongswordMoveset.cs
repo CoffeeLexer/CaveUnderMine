@@ -7,20 +7,23 @@ namespace PlayerControl
     {
         protected override void InitializeMoveset()
         {
-            timings = new[] {new Timing(attackSpeed, 0.5f, 0.7f), new Timing(attackSpeed,0.6f, 0.8f )};
+            timings = new[]  { 
+                new Timing(attackSpeed, 0.6f, 0.1f, 1.2f, 1.3f), 
+                new Timing(attackSpeed,0.6f, 0.1f, 1.3f, 1.4f ) };
+            firstSwingDelay = 0.2f;
             animationSet = Movesets.LongSword;
             animations = 2;
             movementSpeed = 2;
+            newAttackChainDelay = 0.2f;
         }
 
         protected override void ChainSignal()
         {
-            Debug.Log("You can chain attacks");
         }
 
         protected override void OnAttackAnimationEnd()
         {
-            Debug.Log("Attack animation ends");
+            
         }
     }
 }
