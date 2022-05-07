@@ -5,6 +5,7 @@ namespace PlayerControl.Weapon
     public class Weapon : MonoBehaviour
     {
         private Collider _collider;
+        public Transform owner;
         public Swing swing { get; private set; }
 
         void Awake()
@@ -16,7 +17,7 @@ namespace PlayerControl.Weapon
         public void MakeDamaging()
         {
             _collider.enabled = true;
-            swing = new Swing();
+            swing = new Swing(owner.transform.forward);
         }
 
         public void MakePassive()
