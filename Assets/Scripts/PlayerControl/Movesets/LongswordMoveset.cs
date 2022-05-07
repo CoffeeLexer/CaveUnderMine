@@ -17,7 +17,7 @@ namespace PlayerControl
             newAttackChainDelay = 0.2f;
         }
 
-        protected override void ChainSignal()
+        protected override void ChainSignal() 
         {
         }
 

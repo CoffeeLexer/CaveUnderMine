@@ -6,6 +6,9 @@ ModelImporter:
   - first:
       74: -3143607352010309131
     second: Sprinting
+  - first:
+      74: -7523799387860143440
+    second: Dodge
   externalObjects: {}
   materials:
     materialImportMode: 2

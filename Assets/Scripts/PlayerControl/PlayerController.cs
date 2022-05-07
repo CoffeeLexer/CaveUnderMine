@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     private InputActionReference sprintAcRef;
     [SerializeField]
     private InputActionReference attackAcRef;
+    [SerializeField]
+    private InputActionReference dodgeAcRef;
 
     [SerializeField] private InputActionReference pauseAcRef;
 
@@ -47,6 +49,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public UnityEvent attackEvent;
     [SerializeField]
+    public UnityEvent dodgeEvent;
+    [SerializeField]
     public UnityEvent pauseEvent;
     [SerializeField]
     public UnityEvent unpauseEvent;
@@ -55,6 +59,7 @@ public class PlayerController : MonoBehaviour
     private InputAction sprintAc => FetchAction(sprintAcRef);
     private InputAction attackAc => FetchAction(attackAcRef);
     private InputAction pauseAc => FetchAction(pauseAcRef);
+    private InputAction dodgeAc => FetchAction(dodgeAcRef);
 
     private InputAction FetchAction(InputActionReference reference)
     {
@@ -69,6 +74,8 @@ public class PlayerController : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         var moveSet = GetComponent<Moveset>();
         if(moveSet != null) moveSet.attacksDone.AddListener(OnAttackEnd);
+        var dodge = GetComponent<Dodge>();
+        if(dodge != null) dodge.DodgeDone.AddListener(OnAttackEnd);
         playerAnimator.SetFloat("runSpeed", movSpeed * animationSpeedMultiplier);
         playerAnimator.SetFloat("sprintSpeed", sprintSpeed * animationSpeedMultiplier);
     }
@@ -87,17 +94,9 @@ public class PlayerController : MonoBehaviour
             unpauseEvent.Invoke();
         }
     }
-
-    private IEnumerator Delay()
-    {
-        yield return new WaitForSeconds(0.05f);
-        OnAttack(default(InputAction.CallbackContext));
-    }
-
     private void OnAttackEnd()
     {
         movementBlock = false;
-        // StartCoroutine(Delay());
     }
 
     private void OnEnable()
@@ -109,6 +108,7 @@ public class PlayerController : MonoBehaviour
         sprintAc.canceled += OnSprintCanceled;
         
         attackAc.performed += OnAttack;
+        dodgeAc.performed += OnDodge;
     }
     
     private void OnDisable()
@@ -120,8 +120,8 @@ public class PlayerController : MonoBehaviour
         sprintAc.canceled -= OnSprintCanceled;
         
         attackAc.performed -= OnAttack;
+        dodgeAc.performed -= OnDodge;
         
-        playerAnimator.fireEvents = true;
     }
 
     private void OnSprintCanceled(InputAction.CallbackContext ctx)
@@ -162,7 +162,13 @@ public class PlayerController : MonoBehaviour
         movementBlock = true;
         attackEvent.Invoke();
     }
-    
+
+    void OnDodge(InputAction.CallbackContext ctx)
+    {
+        movementBlock = true;
+        dodgeEvent.Invoke();
+    }
+
     private void MoveCancel()
     {
         inputAxis = Vector2.zero;

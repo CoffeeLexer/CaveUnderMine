@@ -1018,12 +1018,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6806640729042849873, guid: 25461fb6e85f6744791ce6076655a587, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.035372786
+      value: -0.035372823
       objectReference: {fileID: 0}
     - target: {fileID: 6806640729042849873, guid: 25461fb6e85f6744791ce6076655a587, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.014596267
+      value: 0.014596281
       objectReference: {fileID: 0}
+    - target: {fileID: 6806640729179370042, guid: 25461fb6e85f6744791ce6076655a587, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806640729179370043, guid: 25461fb6e85f6744791ce6076655a587, type: 3}
+      propertyPath: dodgeAcRef
+      value: 
+      objectReference: {fileID: -1694776854024905205, guid: 80e29a323a7332a408cb72efa59a6523, type: 3}
     - target: {fileID: 6806640729179370043, guid: 25461fb6e85f6744791ce6076655a587, type: 3}
       propertyPath: pauseAcRef
       value: 
@@ -2794,6 +2802,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6806640729179370040, guid: 25461fb6e85f6744791ce6076655a587, type: 3}
   m_PrefabInstance: {fileID: 549212796}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1399336190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399336176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1031a0d4f9f1442d8d114cedbdc9ff16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dodgeSpeed: 5
+  dodgeAnimationSpeed: 5
+  dodgeDuration: 0.6
+  vulnerableAfter: 0.4
+  DodgeDone:
+    m_PersistentCalls:
+      m_Calls: []
+  Vulnerable:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1468590832
 GameObject:
   m_ObjectHideFlags: 0
