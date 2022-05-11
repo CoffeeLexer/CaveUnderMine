@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class InteractionCamera : MonoBehaviour
 {
-    private Camera rayCamera;
-    [SerializeField] private Camera UICamera;
+    private UnityEngine.Camera rayCamera;
+    [SerializeField] private UnityEngine.Camera UICamera;
     [SerializeField] private RectTransform crosshair;
     [SerializeField] private Text text;
     
@@ -18,7 +18,7 @@ public class InteractionCamera : MonoBehaviour
     private Vector3 rayPosition;
     private void Start()
     {
-        rayCamera = GetComponent<Camera>();
+        rayCamera = GetComponent<UnityEngine.Camera>();
         var v = UICamera.WorldToScreenPoint(crosshair.position);
         rayPosition = new Vector3(v.x, v.y, 0.0f);
     }

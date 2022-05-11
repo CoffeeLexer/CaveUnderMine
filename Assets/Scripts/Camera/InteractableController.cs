@@ -18,12 +18,12 @@ public class InteractableController : MonoBehaviour
 
     private Transform target;
     public Transform selected { get; private set; }
-    private Camera cam;
+    private UnityEngine.Camera cam;
     private Vector3 center;
 
     private void Awake()
     {
-        cam = GetComponent<Camera>();
+        cam = GetComponent<UnityEngine.Camera>();
         center = new Vector3((float)cam.pixelWidth / 2, (float)cam.pixelHeight / 2, 0);
         target = cinemachineFreeLook.m_LookAt;
     }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Camera;
 using JetBrains.Annotations;
 using PlayerControl;
 using Unity.Mathematics;
@@ -38,13 +39,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] 
     private float animationSpeedMultiplier = 1.5f;
 
-    public bool movementBlock = false;
+    public bool isAttacking = false;
+    public bool isDodging = false;
     
     private CharacterController cc;
     private Animator playerAnimator;
     public Vector2 inputAxis;
     private bool isSprinting = false;
     private bool paused = false;
+    private Transform lockTarget;
     
     [SerializeField]
     public UnityEvent attackEvent;
@@ -54,6 +57,10 @@ public class PlayerController : MonoBehaviour
     public UnityEvent pauseEvent;
     [SerializeField]
     public UnityEvent unpauseEvent;
+
+    [SerializeField] private LockonInputProvider lip;
+
+    
 
     private InputAction movAc => FetchAction(moveAcRef);
     private InputAction sprintAc => FetchAction(sprintAcRef);
@@ -75,7 +82,13 @@ public class PlayerController : MonoBehaviour
         var moveSet = GetComponent<Moveset>();
         if(moveSet != null) moveSet.attacksDone.AddListener(OnAttackEnd);
         var dodge = GetComponent<Dodge>();
-        if(dodge != null) dodge.DodgeDone.AddListener(OnAttackEnd);
+        if(dodge != null) dodge.DodgeDone.AddListener(OnDodgeEnd);
+        if (lip != null)
+        {
+            lip.OnLock.AddListener(LockRotationTo);
+            lip.OnUnlock.AddListener(UnlockRotation);
+        }
+
         playerAnimator.SetFloat("runSpeed", movSpeed * animationSpeedMultiplier);
         playerAnimator.SetFloat("sprintSpeed", sprintSpeed * animationSpeedMultiplier);
     }
@@ -94,11 +107,6 @@ public class PlayerController : MonoBehaviour
             unpauseEvent.Invoke();
         }
     }
-    private void OnAttackEnd()
-    {
-        movementBlock = false;
-    }
-
     private void OnEnable()
     {
         pauseAc.performed += OnPause;
@@ -126,17 +134,17 @@ public class PlayerController : MonoBehaviour
 
     private void OnSprintCanceled(InputAction.CallbackContext ctx)
     {
-        if (!paused) SprintCancel();
+        SprintCancel();
     }
 
     private void OnMoveCanceled(InputAction.CallbackContext ctx)
     {
-        if (!paused) MoveCancel();
+        MoveCancel();
     }
 
     private void OnSprint(InputAction.CallbackContext ctx)
     {
-        if (!paused) Sprint();
+        Sprint();
     }
 
 
@@ -148,25 +156,42 @@ public class PlayerController : MonoBehaviour
             isSprinting = true;
         }
     }
+    
+    private void SprintCancel()
+    {
+        playerAnimator.SetBool("isSprinting", false);
+        isSprinting = false;
+    }
     private void OnMove(InputAction.CallbackContext ctx)
     {
-        if (!paused)
-        {
-            inputAxis = ctx.ReadValue<Vector2>();
-            playerAnimator.SetBool("isWalking", true);
-        }
+        inputAxis = ctx.ReadValue<Vector2>();
+        playerAnimator.SetBool("isWalking", true);
     }
     
     void OnAttack(InputAction.CallbackContext ctx)
     {
-        movementBlock = true;
+        isAttacking = true;
         attackEvent.Invoke();
     }
+    
+    private void OnAttackEnd()
+    {
+        isAttacking = false;
+    }
+
 
     void OnDodge(InputAction.CallbackContext ctx)
     {
-        movementBlock = true;
-        dodgeEvent.Invoke();
+        if (!isAttacking)
+        {
+            isDodging = true;
+            dodgeEvent.Invoke();
+        }
+    }
+
+    void OnDodgeEnd()
+    {
+        isDodging = false;
     }
 
     private void MoveCancel()
@@ -177,21 +202,25 @@ public class PlayerController : MonoBehaviour
         isSprinting = false;
     }
     
-    private void SprintCancel()
-    {
-        playerAnimator.SetBool("isSprinting", false);
-        isSprinting = false;
-    }
-
     private void FixedUpdate()
     {
-        if(!movementBlock) UpdatePosition();
-        if(inputAxis != Vector2.zero) UpdateRotation();
+        if(!isAttacking && !isDodging) UpdatePosition();
+        UpdateRotation();
     }
+
+    public void LockRotationTo(Transform transform) => this.lockTarget = transform;
+    public void UnlockRotation() => this.lockTarget = null;
 
     private void UpdatePosition()
     {
         var currMovSpeed = isSprinting ? sprintSpeed : movSpeed;
+        if (lockTarget)
+        {
+            var _positionMovement = inputAxis != Vector2.zero ? transform.forward * currMovSpeed : Vector3.zero;
+            _positionMovement.y = 0;
+            var _newPos = cc.center + _positionMovement;
+            cc.SimpleMove(_newPos);
+        }
         var positionMovement = inputAxis != Vector2.zero ? transform.forward * currMovSpeed : Vector3.zero;
         positionMovement.y = 0;
         var newPos = cc.center + positionMovement;
@@ -200,9 +229,20 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateRotation()
     {
-        var angle = -Vector2.SignedAngle(Vector2.up, inputAxis);
-        var fixedInput = Quaternion.Euler(0, angle + camera.eulerAngles.y, 0);
-        var nextRot = Quaternion.Lerp(transform.rotation, fixedInput, rotSpeed * Time.deltaTime);
+        if (lockTarget == null || isSprinting)
+        {
+            var angle = -Vector2.SignedAngle(Vector2.up, inputAxis);
+            var fixedInput = Quaternion.Euler(0, angle + camera.eulerAngles.y, 0);
+            var nextRotation = Quaternion.Lerp(transform.rotation, fixedInput, rotSpeed * Time.deltaTime);
+            cc.transform.rotation = nextRotation;
+            return;
+        }
+        var relativePos = lockTarget.position - transform.position;
+        print("Relative: " + relativePos);
+        var rotateTo = Quaternion.LookRotation(relativePos);
+        print("rotateTo: " + rotateTo);
+        var nextRot = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, rotateTo.eulerAngles.y, 0), rotSpeed * Time.deltaTime);
         cc.transform.rotation = nextRot;
+
     }
 }
