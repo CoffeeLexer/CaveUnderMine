@@ -6,17 +6,17 @@ using UnityEngine.UI;
 public class InteractionCamera : MonoBehaviour
 {
     private UnityEngine.Camera rayCamera;
-    [SerializeField] private UnityEngine.Camera UICamera;
-    [SerializeField] private RectTransform crosshair;
-    [SerializeField] private Text text;
-    
+    public UnityEngine.Camera UICamera;
+    public RectTransform crosshair;
+    public Text text;
+
     private Interactable interaction;
     private RaycastHit hit;
     public Ray ray;
-    
-    [SerializeField]
-    private Vector3 rayPosition;
-    private void Start()
+
+    [SerializeField] private Vector3 rayPosition;
+
+    private void OnEnable()
     {
         rayCamera = GetComponent<UnityEngine.Camera>();
         var v = UICamera.WorldToScreenPoint(crosshair.position);
@@ -42,6 +42,6 @@ public class InteractionCamera : MonoBehaviour
 
     public void Interact(InputAction.CallbackContext context)
     {
-        if(interaction) interaction.Invoke();
+        if (interaction) interaction.Invoke();
     }
 }

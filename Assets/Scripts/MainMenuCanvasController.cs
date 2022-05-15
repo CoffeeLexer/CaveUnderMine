@@ -10,17 +10,6 @@ public class MainMenuCanvasController : MonoBehaviour
     [SerializeField] private RectTransform mainMenu;
     [SerializeField] private RectTransform optionMenu;
 
-    [Header("Scenes")]
-    [SerializeField]
-    private int menuSceneBuildIndex;
-    
-    [Header("Menus")]
-    [SerializeField] private RectTransform pausedMenu;
-    [SerializeField] private RectTransform gameOverMenu;
-    [SerializeField] private RectTransform networkMenu;
-
-    [SerializeField] private int networkSceneBuildIndex;
-    
     private static void Show(Component component)
     {
         component.gameObject.SetActive(true);
@@ -39,6 +28,7 @@ public class MainMenuCanvasController : MonoBehaviour
     public void StartGame()
     {
         Scenes.LoadNextScene();
+        Hide(mainMenu);
     }
 
     public void ExitGame()
@@ -60,14 +50,15 @@ public class MainMenuCanvasController : MonoBehaviour
     
     public void HostGame()
     {
+        Hide(mainMenu);
         NetworkManager.Singleton.StartHost();
-        Scenes.LoadNextScene();
+        
     }
 
     public void JoinGame()
     {
+        Hide(mainMenu);
         NetworkManager.Singleton.StartClient();
-        Scenes.LoadNextScene();
     }
 
 }
