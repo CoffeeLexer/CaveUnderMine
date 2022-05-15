@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,7 +9,7 @@ namespace PlayerControl
     public class Dodge : MonoBehaviour
     {
         private CharacterController cc;
-        private Animator animator;
+        private AnimationController animator;
 
         public float dodgeSpeed;
         public float dodgeAnimationSpeed;
@@ -20,9 +21,10 @@ namespace PlayerControl
         
         void Awake()
         {
-            cc = GetComponent<CharacterController>();
-            animator = GetComponent<Animator>();
-            animator.SetFloat("dodgeSpeed", dodgeAnimationSpeed);
+            var compSet = GetComponent<ComponentSet>();
+            animator = compSet.animationController;
+            cc = compSet.characterController;
+            animator.SwitchAnimation("dodgeSpeed", dodgeAnimationSpeed);
             var pc = GetComponent<PlayerController>();
             if(pc != null) pc.dodgeEvent.AddListener(Activate);
             enabled = false;
@@ -46,7 +48,7 @@ namespace PlayerControl
             if (!enabled)
             {
                 enabled = true;
-                animator.SetTrigger("Dodge");
+                animator.SwitchAnimation("Dodge", null);
                 StartCoroutine(DodgeTimer());
                 StartCoroutine(InvulnerableTimer());
             }
@@ -54,7 +56,7 @@ namespace PlayerControl
 
         private void FixedUpdate()
         {
-            var positionMovement = transform.forward * dodgeSpeed;
+            var positionMovement = cc.transform.forward * dodgeSpeed;
             positionMovement.y = 0;
             var newPos = cc.center + positionMovement;
             cc.SimpleMove(newPos);

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class NudgeTracker : MonoBehaviour
 {
-    [SerializeField] private GoldTracker tracker;
+    [SerializeField] public GoldTracker tracker;
 
     private void OnDestroy()
     {

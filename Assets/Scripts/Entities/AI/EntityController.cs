@@ -22,6 +22,8 @@ namespace AI
         private void Awake()
         {
             cc = GetComponent<CharacterController>();
+            var anim = GetComponent<Animator>();
+            anim.SetBool("isWalking", true);
         }
 
         private void FixedUpdate()

@@ -16,10 +16,8 @@ public class GameplayCanvasController : MonoBehaviour
 
     private void OnDisable()
     {
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
     }
-
-
 
     public void ShowGameOverMenu()
     {
@@ -30,7 +28,7 @@ public class GameplayCanvasController : MonoBehaviour
     public void ResumeGame()
     {
         Hide(pausedMenu);
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
     }
 
     public void RestartGame()
@@ -63,7 +61,7 @@ public class GameplayCanvasController : MonoBehaviour
     public void PauseGame()
     {
         Show(pausedMenu);
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
     }
 
     private bool IsGameOver()

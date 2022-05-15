@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,10 +8,11 @@ namespace PlayerControl
 {
     public abstract class Moveset : MonoBehaviour
     {
-        protected Timing[] timings;
-        protected Animator playerAnimator;
-        protected float movementSpeed;
         protected CharacterController cc;
+        protected AnimationController playerAnimator;
+        
+        protected Timing[] timings;
+        protected float movementSpeed;
         protected bool paused = false;
         protected float firstSwingDelay;
         protected float newAttackChainDelay;
@@ -39,30 +41,30 @@ namespace PlayerControl
         public void TogglePause()
         {
             paused = !paused;
-            playerAnimator.SetInteger("attackAnimationIndex", -1);
+            playerAnimator.SwitchAnimation("attackAnimationIndex", -1);
             enabled = false;
         }
 
         public void Awake()
         {
             InitializeMoveset();
-            playerAnimator = GetComponent<Animator>();
-            playerAnimator.SetInteger("attackMoveset", (int)animationSet);
+            var compSet = GetComponent<ComponentSet>();
+            playerAnimator = compSet.animationController;
+            cc = compSet.characterController;
+            playerAnimator.SwitchAnimation("attackMoveset", (int)animationSet);
             animationIndex = -1;
             enabled = false;
             queuedUp = false;
-            cc = GetComponent<CharacterController>();
             var pc = GetComponent<PlayerController>();
             if(pc != null) pc.attackEvent.AddListener(Continue);
-            playerAnimator = GetComponent<Animator>();
-            playerAnimator.SetFloat("attackSpeed", attackSpeed);
+            playerAnimator.SwitchAnimation("attackSpeed", attackSpeed);
         }
 
         private void OnEnable()
         {
             // Debug.Log("Attacking is initiated");
             animationIndex = 0;
-            playerAnimator.SetInteger("attackAnimationIndex", animationIndex);
+            playerAnimator.SwitchAnimation("attackAnimationIndex", animationIndex);
             attackIsChained = false;
             chainAble = false;
             queuedUp = false;
@@ -140,7 +142,7 @@ namespace PlayerControl
             {
                 // Debug.Log("Done");
                 chainAble = false;
-                playerAnimator.SetInteger("attackAnimationIndex", -1);
+                playerAnimator.SwitchAnimation("attackAnimationIndex", -1);
                 enabled = false;
                 StartCoroutine(AttackEndDelay());
                 attacksDone.Invoke();
@@ -149,7 +151,7 @@ namespace PlayerControl
             {
                 firstSwing = false;
                 attackIsChained = false;
-                playerAnimator.SetInteger("attackAnimationIndex", animationIndex);
+                playerAnimator.SwitchAnimation("attackAnimationIndex", animationIndex);
                 RunTimers(timings[animationIndex]);
             }
             OnAttackAnimationEnd();
@@ -165,7 +167,7 @@ namespace PlayerControl
 
         private void FixedUpdate()
         {
-            var positionMovement = transform.forward * movementSpeed;
+            var positionMovement = cc.transform.forward * movementSpeed;
             positionMovement.y = 0;
             var newPos = cc.center + positionMovement;
             cc.SimpleMove(newPos);
