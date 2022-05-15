@@ -11,10 +11,10 @@ public class UtilitiesWindow : EditorWindow
 {
     private GameObject _parent;
     
-    [MenuItem("Supreme/Dungeon Generator")]
+    [MenuItem("Supreme/Utilities")]
     public static void ShowWindow()
     {
-        EditorWindow.GetWindow(typeof(MyWindow));
+        EditorWindow.GetWindow(typeof(UtilitiesWindow));
     }
     
     void OnGUI()
@@ -24,7 +24,10 @@ public class UtilitiesWindow : EditorWindow
 
         if (GUILayout.Button("Delete Inactive Children"))
         {
-
+            foreach (Transform child in _parent.transform)
+            {
+                if(!child.gameObject.activeSelf) GameObject.DestroyImmediate(child.gameObject);
+            }
         }
     }
 }

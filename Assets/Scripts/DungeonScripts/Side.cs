@@ -1,5 +1,6 @@
 ﻿using Unity.Mathematics;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEditor.Searcher;
 using UnityEngine;
 
@@ -25,16 +26,12 @@ namespace DungeonScripts
 
         public void Init(GameObject objectBase, float unitSize, GameObject parent)
         {
-            gameObject = GameObject.Instantiate(
-                objectBase,
-                new Vector3(
-                    -unitPosition.x * unitSize,
-                    0,
-                    unitPosition.y * unitSize),
-                objectBase.transform.rotation);
-            gameObject.name = $"Side_{rotation}";
+            gameObject = PrefabUtility.InstantiatePrefab(objectBase, parent.transform) as GameObject;
+            gameObject.transform.position =
+                new Vector3(-unitPosition.x * unitSize,0,unitPosition.y * unitSize);
+            gameObject.transform.rotation = objectBase.transform.rotation;
             gameObject.transform.Rotate(0, 0, rotation);
-            gameObject.transform.SetParent(parent.transform);
+            gameObject.name = $"Side";
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEditor.SceneTemplate;
 
 namespace DungeonScripts
@@ -67,19 +68,18 @@ namespace DungeonScripts
             gameObject = new GameObject[4];
             for (int i = 0; i < 4; i++)
             {
-                gameObject[i] = GameObject.Instantiate(
-                    objectBase,
-                    new Vector3(
-                        -unitPosition.x * unitSize,
-                        0,
-                        unitPosition.y * unitSize),
-                    objectBase.transform.rotation);
-                gameObject[i].transform.SetParent(parent.transform);
+                gameObject[i] = PrefabUtility.InstantiatePrefab(objectBase, parent.transform) as GameObject;
+                gameObject[i].transform.position = new Vector3(
+                    -unitPosition.x * unitSize,
+                    0,
+                    unitPosition.y * unitSize);
+                gameObject[i].transform.rotation = objectBase.transform.rotation;
                 gameObject[i].transform.Rotate(0, 0, 90.0f * i);
                 if (i % 2 == 0)
                 {
                     gameObject[i].transform.localScale.Set(-1, 1, -1);
                 }
+                gameObject[i].name = $"Corner";
             }
         }
     }
