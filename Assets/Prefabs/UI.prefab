@@ -1113,10 +1113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 590132d44dad2a84ea3e6428763f20c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartContainer: {fileID: 0}
-  ammoContainer: {fileID: 0}
-  heartPrefab: {fileID: 0}
-  ammoPrefab: {fileID: 0}
   pausedMenu: {fileID: 9114609114210756923}
   gameOverMenu: {fileID: 9114609114595052096}
 --- !u!1 &9114609115247122212

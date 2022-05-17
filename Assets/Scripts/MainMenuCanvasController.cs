@@ -9,6 +9,14 @@ public class MainMenuCanvasController : MonoBehaviour
 {
     [SerializeField] private RectTransform mainMenu;
     [SerializeField] private RectTransform optionMenu;
+    private SceneFader sceneFader;
+    private bool changingScenes;
+    private bool fadeStage;
+    private void Awake()
+    {
+        sceneFader = GetComponent<SceneFader>();
+        fadeStage = false;
+    }
 
     private static void Show(Component component)
     {
@@ -50,11 +58,24 @@ public class MainMenuCanvasController : MonoBehaviour
     
     public void HostGame()
     {
-        Hide(mainMenu);
-        NetworkManager.Singleton.StartHost();
-        
+        if (changingScenes)
+        {
+            return;
+        }
+        StartCoroutine(StartGameDelayed());
     }
-
+    private IEnumerator StartGameDelayed()
+    {
+        changingScenes = true;
+        yield return sceneFader.FadeOutScene();
+        Hide(mainMenu);                                 
+        NetworkManager.Singleton.StartHost();     
+        StartCoroutine(StartGameDelayed2());
+    }
+    private IEnumerator StartGameDelayed2()
+    {
+        yield return sceneFader.FadeInScene();
+    }
     public void JoinGame()
     {
         Hide(mainMenu);

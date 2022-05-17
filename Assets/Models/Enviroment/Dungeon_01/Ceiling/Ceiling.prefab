@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2989493402073100419}
   - component: {fileID: 1051633535323997257}
   - component: {fileID: 5518513130897145412}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,14 +26,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556234811596580252}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &2989493402073100419
 MeshFilter:
   m_ObjectHideFlags: 0

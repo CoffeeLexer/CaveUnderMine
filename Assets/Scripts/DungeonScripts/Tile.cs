@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using UnityEditor;
 
 namespace DungeonScripts
 {
@@ -86,27 +87,19 @@ namespace DungeonScripts
 
         public void Init(GameObject objectBase, float unitSize, GameObject parent)
         {
-            gameObjectGround = GameObject.Instantiate(
-                objectBase,
-                new Vector3(
-                    -index.x * unitSize - unitSize / 2,
-                    0,
-                    index.y * unitSize + unitSize / 2),
-                objectBase.transform.rotation);
-            gameObjectGround.name = $"Tile_{index.x}_{index.y}";
-            gameObjectGround.transform.SetParent(parent.transform);
+            gameObjectGround = PrefabUtility.InstantiatePrefab(objectBase, parent.transform) as GameObject;
+            gameObjectGround.transform.position =
+                new Vector3(-index.x * unitSize - unitSize / 2, 0, index.y * unitSize + unitSize / 2);
+            gameObjectGround.transform.rotation = objectBase.transform.rotation;
+            gameObjectGround.name = $"Ground_{index.x}_{index.y}";
         }
         public void InitCeiling(GameObject objectBase, float unitSize, GameObject parent)
         {
-            gameObjectGround = GameObject.Instantiate(
-                objectBase,
-                new Vector3(
-                    -index.x * unitSize - unitSize / 2,
-                    5,
-                    index.y * unitSize + unitSize / 2),
-                objectBase.transform.rotation);
-            gameObjectGround.name = $"Tile_{index.x}_{index.y}";
-            gameObjectGround.transform.SetParent(parent.transform);
+            gameObjectGround = PrefabUtility.InstantiatePrefab(objectBase, parent.transform) as GameObject;
+            gameObjectGround.transform.position = 
+                new Vector3(-index.x * unitSize - unitSize / 2,5,index.y * unitSize + unitSize / 2);
+            gameObjectGround.transform.rotation = objectBase.transform.rotation;
+            gameObjectGround.name = $"Ceiling_{index.x}_{index.y}";
         }
     }
 }

@@ -8,6 +8,8 @@ TagManager:
   - PlayerCamera
   - CMFreeLook
   - ZombiePlayer
+  - Ground
+  - Exit
   layers:
   - Default
   - TransparentFX
@@ -15,12 +17,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Volumes
+  - Walls
+  - Ground
+  - Ceilings
+  - Exit
   - 
   - 
   - 
