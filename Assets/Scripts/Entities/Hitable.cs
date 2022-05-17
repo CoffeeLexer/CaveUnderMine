@@ -54,7 +54,7 @@ namespace Environment
                     {
                         uniqueWeaponHits[weapon] = weapon.swing;
                         animator.SetTrigger("GetDamage");
-                        force = Vector3.Normalize(weapon.swing.force) * 5;
+                        force = weapon.swing.force;
                         movableEntity.ApplyForce(force);
                         Debug.Log("Enemy hit");
                     }

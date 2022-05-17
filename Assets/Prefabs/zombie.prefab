@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8232139985791984757}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mazasis.l.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2568861400414534106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg.ik.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1200757698318034702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: didysis.r.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2793295239075990652}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8559971100791014962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: nykstys.l.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6435606640013521046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: smilius.l.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4371567089564344026}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mazasis.l.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8800809983982915845}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bevardis.l.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3879095623243316061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7272288523300785032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm.pole.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8083449665053913576}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: smilius.r.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7816198212418982671}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: item.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1604088789564892985}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 260202418184315537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: item.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5988248557360923610}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm.pole.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7204553342473455206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: nykstys.r.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4799639891642685287}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: smilius.l.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1233316958441291912}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: item.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1212938441508097277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mazasis.r.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1015288925094419729}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: didysis.l.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +645,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3118664076406727107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: didysis.l.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2551368233903320710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: didysis.r.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,7 +707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1054851330288741796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bevardis.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5625450185840554059}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: nykstys.r.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,7 +770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6309465396828946568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: smilius.r.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,7 +802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3506506079604967447}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: palm.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -839,7 +839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6865763280402644655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: didysis.r.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -871,7 +871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7087210417105138401}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: forearm.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,7 +903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8514077126723732093}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: forearm.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -935,7 +935,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8591723883703327699}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shoulder.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -968,7 +968,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1488363879224360618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: chest1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1002,7 +1002,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7668430290695779272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: smilius.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1034,7 +1034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7018935493833864633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1069,7 +1069,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7208168251683315584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm.ik.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1101,7 +1101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6986512430300808893}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: smilius.r.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1132,7 +1132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2799653791346688941}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mazasis.l.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1164,7 +1164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8145052771351707590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mazasis.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1196,7 +1196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9003260974983173398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bevardis.r.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1228,7 +1228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1823012532482906755}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: didysis.l.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1261,7 +1261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 751696174310767368}
   - component: {fileID: 5568113595301773848}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1423,7 +1423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5150897696810723387}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bevardis.r.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1454,7 +1454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 577975645535103793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1486,7 +1486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2768783155339803930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: didysis.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1518,7 +1518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6828005782852039013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm.pole.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1560,7 +1560,7 @@ GameObject:
   - component: {fileID: 7003281865965385324}
   - component: {fileID: 7003281865965385323}
   - component: {fileID: 7003281865965385322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1764,7 +1764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2174690012185240981}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1796,7 +1796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 156391483162481551}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: smilius.l.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1828,7 +1828,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7604475728422672567}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: foot.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1859,7 +1859,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1101144531548238757}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1891,7 +1891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8651849059837262532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: smilius.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1923,7 +1923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6272803370148723140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1954,7 +1954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8301053890713352373}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: foot.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1986,7 +1986,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 353054415224699917}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: nykstys.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2018,7 +2018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6017386551201601479}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: nykstys.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2050,7 +2050,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2112806981472963072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: item.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2081,7 +2081,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1363021272058836006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg.pole.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2112,7 +2112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5065591393252146413}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mazasis.r.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2144,7 +2144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7810753523643500598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: neck.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2175,7 +2175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2627596482338819529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: foot.l_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2206,7 +2206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 993038724814331231}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: neck.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2238,7 +2238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7371129903549306855}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bevardis.l.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2269,7 +2269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4805336889177862387}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2301,7 +2301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2837219960838139844}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mazasis.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2333,7 +2333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3328564062772609371}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2365,7 +2365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 495192280158752122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: chest0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2397,7 +2397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543170769829235416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bevardis.r.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2429,7 +2429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6649328158299298713}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg.pole.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2461,7 +2461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7139847879833558387}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: foot.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2493,7 +2493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3001562174132138195}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg.ik.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2525,7 +2525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7954045516766224520}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: didysis.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2557,7 +2557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7312822571308470571}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shoulder.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2590,7 +2590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4956398992881763521}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm.pole.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2622,7 +2622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4463280993358618158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm.ik.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2654,7 +2654,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553472250061179740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: palm.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2691,7 +2691,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5595740973563917543}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shin.l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2723,7 +2723,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7429558688367606675}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg.pole.r_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2754,7 +2754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1695092622655633381}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shin.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2786,7 +2786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 174645857006411292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bevardis.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2818,7 +2818,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7140775401009523821}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mazasis.r.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2849,7 +2849,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7320469513488922951}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bevardis.l.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2881,7 +2881,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8672188761126881949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg.pole.r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2913,7 +2913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6626702705221937225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: nykstys.l.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}

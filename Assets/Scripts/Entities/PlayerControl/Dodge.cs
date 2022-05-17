@@ -37,11 +37,6 @@ namespace PlayerControl
             enabled = false;
         }
         
-        private IEnumerator InvulnerableTimer()
-        {
-            yield return new WaitForSeconds(vulnerableAfter);
-            Vulnerable.Invoke();
-        }
 
         public void Activate()
         {
@@ -52,6 +47,11 @@ namespace PlayerControl
                 StartCoroutine(DodgeTimer());
                 StartCoroutine(InvulnerableTimer());
             }
+        }
+        private IEnumerator InvulnerableTimer()
+        {
+            yield return new WaitForSeconds(vulnerableAfter);
+            Vulnerable.Invoke();
         }
 
         private void FixedUpdate()

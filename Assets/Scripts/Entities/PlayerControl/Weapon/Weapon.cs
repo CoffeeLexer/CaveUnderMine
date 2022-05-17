@@ -6,6 +6,7 @@ namespace PlayerControl.Weapon
     {
         private Collider _collider;
         public Transform owner;
+        public float force = 1f;
         public Swing swing { get; private set; }
 
         void Awake()
@@ -17,7 +18,7 @@ namespace PlayerControl.Weapon
         public void MakeDamaging()
         {
             _collider.enabled = true;
-            swing = new Swing(owner.transform.forward);
+            swing = new Swing(Vector3.Normalize(owner.transform.forward) * force);
         }
 
         public void MakePassive()
