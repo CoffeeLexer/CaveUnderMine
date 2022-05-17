@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5329211194541224795
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1565744501678577280, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: m_Name
+      value: Coin Generator
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946006955419866927, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946006955419866927, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.898064
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946006955419866927, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946006955419866927, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.1574755
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946006955419866927, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946006955419866927, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946006955419866927, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946006955419866927, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946006955419866927, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946006955419866927, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946006955419866927, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167794415800726386, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: tileLayout
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167794415800726386, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: goldTracker
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167794415800726386, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: startGenList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167794415800726386, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: startGenList.Array.data[0].item
+      value: 
+      objectReference: {fileID: 3842970772710456023, guid: 62e32106fda8d6c46ace7373808a403e, type: 3}
+    - target: {fileID: 7167794415800726386, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: startGenList.Array.data[1].item
+      value: 
+      objectReference: {fileID: 5370040828457994502, guid: 5aff4fcd0f676cd4aab30411778966b7, type: 3}
+    - target: {fileID: 7167794415800726386, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: startGenList.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167794415800726386, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: startGenList.Array.data[1].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167794415800726386, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: startGenList.Array.data[1].isItem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167794415800726386, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: startGenList.Array.data[0].offset.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167794415800726386, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
+      propertyPath: startGenList.Array.data[0].offset.z
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2c8953c1adcbef74ab146ef105c3c179, type: 3}
